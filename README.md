@@ -27,3 +27,41 @@ Az adatbázis az alábbi adatokat tárolja (ezek még nem feltétlenül a fizika
 	• számlák (felhasználó, számlaszám, létrehozás dátuma);
 
 	• tranzakciók (típus, forrás számlaszám, cél számlaszám, cél tulajdonos neve, dátum, összeg).
+
+Funkcionális követelmények:
+ 
+	VENDÉG:
+		- Bejelentkezés felhasználónévvel, jelszóval, számlaszámmal és PIN-kóddal
+		- Bejelentkezés biztonsági móddal
+		- Számla(k) egyenlegének lekérdezése
+		- Számla(k) történetének lekérdezése
+		- Új utalás indítása
+	
+	ALKALMAZOTT:
+		- Bejelentkezés
+		- Ügyfél és számlaszám kiválasztása
+		- Bankszámlára betétel
+		- Bankszámláról kivétel
+		- Átutalás
+		- Számla zárolása
+		- Számla zárolásának feloldása
+		
+Nem funkcionális követelmények:
+
+	- Biztonság: Belépés után szükséges az ellenőrző PIN-kód megadása is. Továbbá lehetősége van az ügyfélnek minden művelet utáni 			     megerősítést kérni.
+	- Megbízhatóság
+	- Gyorsaság
+	- Felhasználóbarát felület
+
+Szakterületi fogalmak:
+
+	- Egyenleg: Adott számlaszámon jelenleg rendelkezésre álló pénzösszeg.
+	- Átutalás: Két számlaszám közti pénzösszeg mozgatása. Szükséges egy küldő számlaszám, egy cél számlaszám, célszámla tulajdonosa 		     illetve az átutalás összege.	
+	- Betét: Adott számlaszámra bizonyos összeg rátétele. Ekkor a számlaszám egyenlege nő a betét összegével.
+	- Kivét: Adott számlaszámról bizonyos összeg kivétele. Ekkor a számlaszám egyenlege csökken a kitét összegével.
+
+Szerepkörök:
+
+	- Ügyfél 
+	- Alkalmazott 
+
