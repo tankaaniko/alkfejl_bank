@@ -18,9 +18,13 @@ public class Transaction {
     @Enumerated(EnumType.STRING)
     private Type type;
     
+    
+    
     @Column(nullable = true)
     private String sourceAccountNumber;
    
+    
+    
     @Column(nullable = true)
     private String targetAccountNumber;
    
