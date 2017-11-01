@@ -2,13 +2,20 @@ package hu.elte.bank.entity;
 
 import java.util.Date;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-
+@Entity
+@Data // lombok miatt getter setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -36,11 +43,10 @@ public class Transaction {
     
     @Column(nullable = false)
     private int amount;    
-  
-    
+     
     
     public enum Type{
         IN,OUT,TRANSFER
-        //kivét, betét, utalás
+        // betét, kivét, utalás
     }
 }
