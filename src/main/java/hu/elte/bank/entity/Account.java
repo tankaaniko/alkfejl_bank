@@ -39,5 +39,8 @@ public class Account {
     @Column(nullable=false)
     private long balance;
     
+    @Column(nullable=false)
+    private boolean blocked;
+    
     
 }
