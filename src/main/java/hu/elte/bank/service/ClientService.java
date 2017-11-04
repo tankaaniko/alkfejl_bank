@@ -1,5 +1,6 @@
 package hu.elte.bank.service;
 
+import hu.elte.bank.entity.Account;
 import hu.elte.bank.entity.Client;
 import hu.elte.bank.repository.ClientRepository;
 import hu.elte.bank.service.exceptions.ClientNotValidException;
@@ -23,6 +24,10 @@ public class ClientService {
         }
         throw new ClientNotValidException();
     }
+    
+    public void logout(Client client) {
+        client = null;
+    }
 
     public boolean isValid(Client client) {
         return clientRepository.findByUsernameAndPassword(client.getUsername(), client.getPassword()).isPresent();
@@ -31,4 +36,5 @@ public class ClientService {
     public boolean isLoggedIn() {
         return client != null;
     }
+    
 }
