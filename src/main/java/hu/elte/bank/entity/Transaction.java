@@ -25,7 +25,9 @@ public class Transaction {
     @Enumerated(EnumType.STRING)
     private Type type;
     
-    
+    @Column(nullable=false)
+    @Enumerated(EnumType.STRING)
+    private Status status;
     
     @Column(nullable = true)
     private String sourceAccountNumber;
@@ -44,9 +46,14 @@ public class Transaction {
     @Column(nullable = false)
     private int amount;    
      
+
     
     public enum Type{
         IN,OUT,TRANSFER
         // betét, kivét, utalás
+    }
+    
+    public enum Status{
+        ACTIVE, EXECUTED
     }
 }

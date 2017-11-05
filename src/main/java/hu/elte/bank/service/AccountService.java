@@ -22,7 +22,7 @@ public class AccountService {
     public List<Transaction> getMyTransactions(String sourceAccountNumber) {
         List<Transaction> list = new ArrayList<>();
         List<Transaction> allTransaction = new ArrayList<>();
-        transactionRepository.findBySourceAccountNumber(sourceAccountNumber).iterator().forEachRemaining(allTransaction::add);
+        transactionRepository.findAllBySourceAccountNumber(sourceAccountNumber).iterator().forEachRemaining(allTransaction::add);
         long currentDate = System.currentTimeMillis();
         long dayInMillis = 86400000;
         for(Transaction transaction : allTransaction){

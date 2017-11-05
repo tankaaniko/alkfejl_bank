@@ -19,7 +19,7 @@ public class EmployeeService {
 
     public Employee login(Employee employee) throws EmployeeNotValidException {
         if (isValid(employee)) {
-            return this.employee = employeeRepository.findByName(employee.getUsername());
+            return this.employee = employeeRepository.findByUsername(employee.getUsername());
         }
         throw new EmployeeNotValidException();
     }

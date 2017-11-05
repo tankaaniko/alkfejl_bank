@@ -20,7 +20,7 @@ public class ClientService {
 
     public Client login(Client client) throws ClientNotValidException {
         if (isValid(client)) {
-            return this.client = clientRepository.findByName(client.getUsername());
+            return this.client = clientRepository.findByUsername(client.getUsername());
         }
         throw new ClientNotValidException();
     }
