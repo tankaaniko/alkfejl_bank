@@ -1,3 +1,5 @@
+# I. Feladatleírás:
+'''
 Banki adminisztráció
 
 Készítsük el egy bank ügyfelek kezelését, és az ügyfelekkel kapcsolatos tevékenységek adminisztrálását elősegítő rendszert.
@@ -21,8 +23,8 @@ Az adatbázis az alábbi adatokat tárolja (ezek még nem feltétlenül a fizika
 	• számlák (felhasználó, számlaszám, létrehozás dátuma);
 	• tranzakciók (típus, forrás számlaszám, cél számlaszám, cél tulajdonos neve, dátum, összeg).
 
-Funkcionális követelmények: 
-VENDÉG:
+# II. Funkcionális követelmények: 
+#### VENDÉG:
 
 	• Bejelentkezés felhasználónévvel, jelszóval, számlaszámmal és PIN-kóddal
 	• Bejelentkezés biztonsági móddal
@@ -30,7 +32,7 @@ VENDÉG:
 	• Számla(k) történetének lekérdezése
 	• Új utalás indítása	
 
-ALKALMAZOTT:
+#### ALKALMAZOTT:
 
 	• Bejelentkezés
 	• Ügyfél és számlaszám kiválasztása
@@ -40,21 +42,95 @@ ALKALMAZOTT:
 	• Számla zárolása
 	• Számla zárolásának feloldása
 		
-Nem funkcionális követelmények:
+#### Nem funkcionális követelmények:
 
 	• Biztonság: Belépés után szükséges az ellenőrző PIN-kód megadása is. Továbbá lehetősége van az ügyfélnek minden művelet utáni  megerősítést kérni.
 	• Megbízhatóság
 	• Gyorsaság
 	• Felhasználóbarát felület
 
-Szakterületi fogalmak:
+#### Szakterületi fogalmak:
 
 	• Egyenleg: Adott számlaszámon jelenleg rendelkezésre álló pénzösszeg.
 	• Átutalás: Két számlaszám közti pénzösszeg mozgatása. Szükséges egy küldő számlaszám, egy cél számlaszám, célszámla tulajdonosa 		     illetve az átutalás összege.	
 	• Betét: Adott számlaszámra bizonyos összeg rátétele. Ekkor a számlaszám egyenlege nő a betét összegével.
 	• Kivét: Adott számlaszámról bizonyos összeg kivétele. Ekkor a számlaszám egyenlege csökken a kitét összegével.
 
-Szerepkörök:
+#### Szerepkörök:
 
 	• Ügyfél 
 	• Alkalmazott 
+
+# III. Backend megvalósítása
+'''
+### 1. Fejlesztői környezet:
+#### a) Felhasznált eszközök:
+	• NetBeans fejlesztői környezet
+	• Spring MVC – Spring Boot technológia
+	• Maven 
+	• H2 adatbázis
+	• Git, GitHub verziókövető rendszer
+#### b) Projekt indítása:
+A projektkönyvtárban Projekt Files -> **pom.xml** fájl tartalmazza a szükséges Spring Boot függőségeket:
+
+	• NetBeans fejlesztői környezet
+	• Spring MVC – Spring Boot technológia
+	• Maven 
+	• H2 adatbázis
+	• Git, GitHub verziókövető rendszer
+	
+Az adatbázis beállításához szükséges a Other Sources -> src/main/resources/-> **application.properties** fájl módosítása:
+
+	spring.datasource.platform=h2
+
+	spring.h2.console.enabled=true
+
+	spring.h2.console.path=/h2
+	
+	spring.datasource.url=jdbc:h2:mem:mydb
+
+Projekt futtatása a pom.xml fájl segítségével:
+pom.xml -> Jobb klikk -> Run Mavel -> Goals -> Goals: **spring-boot:run** 
+
+Ezután a böngészőben a http://localhost:8080 címen érhető el az applikáció.
+
+### 2. Adatbázis terv
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/db_uml.jpg)
+
+Az UML diagramban a táblák közötti kapcsolat esetén a sok kapcsolatot a vonal végén található fekete gömb jelzi.
+
+### 3. Könyvtárszerkezet:
+	•main
+	   •java
+		•hu
+		   •elte
+			•bank
+			    •BankApplication.java
+			    •controller
+				•AccountController.java
+				•ClientController.java
+				•EmployeeController.java
+				•TransactionController.java
+			    •entity
+				•Account.java
+				•Client.java
+				•Employee.java
+				•Transaction.java
+			    •repository
+				•AccountRepository.java
+				•ClientRepository.java
+				•EmployeeRepository.java
+				•TransactionRepository.java
+			    •service
+				•AccountService.java
+				•ClientService.java
+				•EmployeeService.java
+				•TransactionService.java
+			  	•exceptions
+					•ClientNotValidException.java
+	   •resources
+	   	•application.properties
+
+
+	
+		
