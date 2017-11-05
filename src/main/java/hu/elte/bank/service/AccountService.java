@@ -15,8 +15,8 @@ public class AccountService {
     private AccountRepository accountRepository;
     private TransactionRepository transactionRepository;
     
-    public long balanceQuery(Client client){
-        return accountRepository.findByClient(client).get().getBalance();
+    public long balanceQuery(String accountnumber){
+        return accountRepository.findByAccountnumber(accountnumber).get().getBalance();
     }
     
     public List<Transaction> getMyTransactions(String sourceAccountNumber) {

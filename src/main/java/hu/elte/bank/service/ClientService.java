@@ -1,6 +1,5 @@
 package hu.elte.bank.service;
 
-import hu.elte.bank.entity.Account;
 import hu.elte.bank.entity.Client;
 import hu.elte.bank.repository.ClientRepository;
 import hu.elte.bank.service.exceptions.ClientNotValidException;
@@ -13,6 +12,7 @@ import org.springframework.web.context.annotation.SessionScope;
 @SessionScope
 @Data
 public class ClientService {
+    
     @Autowired
     private ClientRepository clientRepository;
 
@@ -35,6 +35,10 @@ public class ClientService {
 
     public boolean isLoggedIn() {
         return client != null;
+    }
+    
+    public Client getLoggedInClient() {
+        return client;
     }
     
 }

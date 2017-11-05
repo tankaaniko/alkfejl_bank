@@ -1,7 +1,11 @@
 package hu.elte.bank.entity;
 
+import static hu.elte.bank.entity.Role.EMPLOYEE;
+import javax.annotation.security.DeclareRoles;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,7 +18,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Employee {
+@DeclareRoles("EMPLOYEE")
+public class Employee  {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,6 +33,10 @@ public class Employee {
     
     @Column(nullable=false)
     private String password;
+    
+    /*@Column(nullable = false, unique = true)
+    @Enumerated(EnumType.STRING)
+    private Role role = EMPLOYEE;*/
     
        
     
