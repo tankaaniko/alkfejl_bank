@@ -1,6 +1,6 @@
 # I. Feladatleírás:
-'''
-Banki adminisztráció
+
+### Banki adminisztráció
 
 Készítsük el egy bank ügyfelek kezelését, és az ügyfelekkel kapcsolatos tevékenységek adminisztrálását elősegítő rendszert.
 
@@ -62,7 +62,7 @@ Az adatbázis az alábbi adatokat tárolja (ezek még nem feltétlenül a fizika
 	• Alkalmazott 
 
 # III. Backend megvalósítása
-'''
+
 ### 1. Fejlesztői környezet:
 #### a) Felhasznált eszközök:
 	• NetBeans fejlesztői környezet
@@ -73,11 +73,13 @@ Az adatbázis az alábbi adatokat tárolja (ezek még nem feltétlenül a fizika
 #### b) Projekt indítása:
 A projektkönyvtárban Projekt Files -> **pom.xml** fájl tartalmazza a szükséges Spring Boot függőségeket:
 
-	• NetBeans fejlesztői környezet
-	• Spring MVC – Spring Boot technológia
-	• Maven 
-	• H2 adatbázis
-	• Git, GitHub verziókövető rendszer
+	• JPA
+	• Web
+	• DevTools
+	• H2 database
+	• Lombok
+	• Test 
+	• Thymeleaf
 	
 Az adatbázis beállításához szükséges a Other Sources -> src/main/resources/-> **application.properties** fájl módosítása:
 
