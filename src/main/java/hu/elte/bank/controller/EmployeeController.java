@@ -30,6 +30,12 @@ public class EmployeeController {
         return "login";
     }
     
+    @GetMapping("/logout")
+    public String logout(){
+        employeeService.logout();
+        return "logout";
+    }
+    
     @PostMapping("/login")
     public String login(@ModelAttribute Employee employee, Model model) {
         if (employeeService.isValid(employee)) {

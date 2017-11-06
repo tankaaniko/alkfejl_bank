@@ -25,7 +25,8 @@ public class ClientService {
         throw new ClientNotValidException();
     }
     
-    public void logout(Client client) {
+    //public void logout(Client client) {
+    public void logout() {
         client = null;
     }
 

@@ -30,6 +30,12 @@ public class ClientController {
         return "login";
     }
     
+    @GetMapping("/logout")
+    public String logout(){
+        clientService.logout( );
+        return "logout";
+    }
+    
     @PostMapping("/login")
     public String login(@ModelAttribute Client client, Model model) {
         if (clientService.isValid(client)) {

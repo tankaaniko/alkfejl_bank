@@ -24,7 +24,8 @@ public class EmployeeService {
         throw new EmployeeNotValidException();
     }
     
-    public void logout(Employee employee) {
+    //public void logout(Employee employee) {
+    public void logout() {
         employee = null;
     }
 
