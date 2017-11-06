@@ -142,11 +142,25 @@ Az UML diagramban a táblák közötti kapcsolat esetén a sok kapcsolatot a von
 	• GET /employee/greet : Alkalmazott üfvözlése
 	• GET /employee/logout : Alkalmazott kijelentkezése
 	• POST /employee/login :  ALkalmazott bejelentkezése
+	
 ##### Client:
 	• GET /client/greet : Felhasználó üdvözlése
 	• GET /client/logout : Felhasználó kijelentkezése
 	• POST /client/login :  Felhasználó bejelentkezése
 
+##### Account:
+	• GET /api/account/balance : Egyenleg lekérdezése
+	• GET /api/account/transactions : Számlatörténet lekérdezése
+	• PUT /api/account/transfer/{transferAmount} : Új átutalás
+	• PUT /api/account/deposit/{amount} : Új betét
+	• PUT /api/account/withdraw/{amount} : Új kivétel
+	• PUT /api/account/lock : Számla zárolása
+	• PUT /api/account/unlock : Számla zárolásának feloldása
+	
+#### Transaction:
+	• GET /api/transaction/list : Összes tranzakció listázása
+	• GET /api/transaction/list/{sourceAccountNumber} : Saját tranzakciók listázása
+	• POST /api/transaction/create : Új tranzakció indítása
 
 
 
