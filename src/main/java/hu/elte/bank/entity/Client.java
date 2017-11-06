@@ -41,7 +41,7 @@ public class Client {
     @Column(nullable=false)
     private long pin;
     
-    private String accountnumber = "123"; //firstAccountNumber(accounts);
+   // private String accountnumber = "123"; //firstAccountNumber(accounts);
     
     private String firstAccountNumber(List<Account> accounts){
         Account account = accounts.get(0);

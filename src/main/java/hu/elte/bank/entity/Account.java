@@ -1,5 +1,6 @@
 package hu.elte.bank.entity;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,8 +28,8 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
    
-    @Column(nullable=false,  unique = true)
-    private String username;
+    //@Column(nullable=false,  unique = true)
+    //private String username;
    
     @Column(nullable=false)
     private String accountNumber;
