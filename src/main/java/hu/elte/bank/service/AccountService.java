@@ -1,7 +1,6 @@
 package hu.elte.bank.service;
 
 import hu.elte.bank.entity.Account;
-import hu.elte.bank.entity.Client;
 import hu.elte.bank.entity.Transaction;
 import hu.elte.bank.repository.AccountRepository;
 import hu.elte.bank.repository.TransactionRepository;

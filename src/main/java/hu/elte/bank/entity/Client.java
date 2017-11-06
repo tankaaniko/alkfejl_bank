@@ -41,6 +41,13 @@ public class Client {
     @Column(nullable=false)
     private long pin;
     
+    private String accountnumber = "123"; //firstAccountNumber(accounts);
+    
+    private String firstAccountNumber(List<Account> accounts){
+        Account account = accounts.get(0);
+        return account.getAccountNumber();
+    }
+    
     /*@Column(nullable = false, unique = true)
     @Enumerated(EnumType.STRING)
     private Role role = CLIENT;*/
