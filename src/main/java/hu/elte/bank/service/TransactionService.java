@@ -1,6 +1,7 @@
 package hu.elte.bank.service;
 
 import hu.elte.bank.entity.Transaction;
+import hu.elte.bank.entity.Transaction.Status;
 import hu.elte.bank.repository.TransactionRepository;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,4 +32,13 @@ public class TransactionService {
         
         return allTransaction;
     }
+    
+     public List<Transaction> listByStatus(Status status){
+        
+        List<Transaction> transactions = new ArrayList<>();
+        transactionRepository.findAllByStatus( status).iterator().forEachRemaining(transactions::add);
+        
+        return transactions;
+    }
+    
 }

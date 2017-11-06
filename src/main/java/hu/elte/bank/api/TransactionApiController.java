@@ -1,6 +1,7 @@
 package hu.elte.bank.api;
 
 import hu.elte.bank.entity.Transaction;
+import hu.elte.bank.entity.Transaction.Status;
 import hu.elte.bank.service.TransactionService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +35,10 @@ public class TransactionApiController {
     @GetMapping("/list")
     public ResponseEntity<List<Transaction>> listAllTransactions() {
         return ResponseEntity.ok(transactionService.listAllTransactions());
+    }
+    
+    @GetMapping("/list/{status}")
+    public ResponseEntity<List<Transaction>> listByStatus(@PathVariable Status status) {
+        return ResponseEntity.ok(transactionService.listByStatus(status));
     }
 }
