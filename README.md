@@ -160,6 +160,7 @@ Az UML diagramban a táblák közötti kapcsolat esetén a sok kapcsolatot a von
 #### Transaction:
 	• GET /api/transaction/list : Összes tranzakció listázása
 	• GET /api/transaction/list/{sourceAccountNumber} : Saját tranzakciók listázása
+	• GET /api/transaction/list/{status} : Tranzakciók listázása státusz szerint
 	• POST /api/transaction/create : Új tranzakció indítása
 
 
