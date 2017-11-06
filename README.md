@@ -108,6 +108,9 @@ Az UML diagramban a táblák közötti kapcsolat esetén a sok kapcsolatot a von
 		   •elte
 			•bank
 			    •BankApplication.java
+			    •api
+			    	•AccountApiController.java
+				•TransactionApiController.java 
 			    •controller
 				•AccountController.java
 				•ClientController.java
@@ -130,8 +133,21 @@ Az UML diagramban a táblák közötti kapcsolat esetén a sok kapcsolatot a von
 				•TransactionService.java
 			  	•exceptions
 					•ClientNotValidException.java
+					•EmployeeNotValidException.java
 	   •resources
 	   	•application.properties
+		•import.sql
+### 4. Végpontok:
+##### Employee:
+	• GET /employee/greet : Alkalmazott üfvözlése
+	• GET /employee/logout : Alkalmazott kijelentkezése
+	• POST /employee/login :  ALkalmazott bejelentkezése
+##### Client:
+	• GET /client/greet : Felhasználó üdvözlése
+	• GET /client/logout : Felhasználó kijelentkezése
+	• POST /client/login :  Felhasználó bejelentkezése
+
+
 
 
 	
