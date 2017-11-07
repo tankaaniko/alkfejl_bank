@@ -91,6 +91,8 @@ Az adatbázis beállításához szükséges a Other Sources -> src/main/resource
 	
 	spring.datasource.url=jdbc:h2:mem:mydb
 
+Az **import.sql** fájl tartalmazza a kezdeti SQL utasításokat. Enélkül a H2 adatbázis mindig üresen indulna el.
+
 Projekt futtatása a pom.xml fájl segítségével:
 pom.xml -> Jobb klikk -> Run Mavel -> Goals -> Goals: **spring-boot:run** 
 
