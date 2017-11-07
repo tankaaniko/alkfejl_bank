@@ -46,6 +46,6 @@ public class ClientController {
     }
     
     private String redirectToGreeting(@ModelAttribute Client client) {
-        return "redirect:/client/greet?name=" + client.getName();
+        return "redirect:/client/greet?name=" + client.getUsername();
     }
 }
