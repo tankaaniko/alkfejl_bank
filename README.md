@@ -101,8 +101,6 @@ Ezután a böngészőben a http://localhost:8080 címen érhető el az applikác
 ### 2. Adatbázis terv
 ![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/db_uml.jpg)
 
-Az UML diagramban a táblák közötti kapcsolat esetén a sok kapcsolatot a vonal végén található fekete gömb jelzi.
-
 ### 3. Könyvtárszerkezet:
 	•main
 	   •java
@@ -113,6 +111,8 @@ Az UML diagramban a táblák közötti kapcsolat esetén a sok kapcsolatot a von
 			    •api
 			    	•AccountApiController.java
 				•TransactionApiController.java 
+				•EmployeeApiController.java
+				•ClientApiController.java
 			    •controller
 				•AccountController.java
 				•ClientController.java
@@ -139,16 +139,17 @@ Az UML diagramban a táblák közötti kapcsolat esetén a sok kapcsolatot a von
 	   •resources
 	   	•application.properties
 		•import.sql
+		
 ### 4. Végpontok:
 ##### Employee:
-	• GET /employee/greet : Alkalmazott üfvözlése
-	• GET /employee/logout : Alkalmazott kijelentkezése
+	• GET /employee : Bejelentkezett alkalmazottak 
 	• POST /employee/login :  ALkalmazott bejelentkezése
+	• POST /employee/logout : Alkalmazott kijelentkezése
 	
 ##### Client:
 	• GET /client/greet : Felhasználó üdvözlése
-	• GET /client/logout : Felhasználó kijelentkezése
 	• POST /client/login :  Felhasználó bejelentkezése
+	• POST /client/logout : Felhasználó kijelentkezése
 
 ##### Account:
 	• GET /api/account/balance : Egyenleg lekérdezése
