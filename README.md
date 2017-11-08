@@ -166,6 +166,8 @@ Ezután a böngészőben a http://localhost:8080 címen érhető el az applikác
 	• GET /api/transaction/list/{status} : Tranzakciók listázása státusz szerint
 	• POST /api/transaction/create : Új tranzakció indítása
 
+### 5. Szekvenciadiagram - Ügyfél bejelentkezése
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/sequence_UML.JPG)
 
 
 	
