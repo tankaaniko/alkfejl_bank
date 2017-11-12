@@ -3,6 +3,7 @@ package hu.elte.bank.api;
 import hu.elte.bank.entity.Transaction;
 import hu.elte.bank.entity.Transaction.Status;
 import hu.elte.bank.service.TransactionService;
+import hu.elte.bank.service.exceptions.NotFoundAccountException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +23,7 @@ public class TransactionApiController {
     private TransactionService transactionService;  
     
     @PostMapping("/create")
-    public ResponseEntity<Transaction> createTransaction(@RequestBody Transaction transaction) {
+    public ResponseEntity<Transaction> createTransaction(@RequestBody Transaction transaction) throws NotFoundAccountException {
         Transaction saved = transactionService.createTransaction(transaction);
         return ResponseEntity.ok(saved);
     }

@@ -6,16 +6,27 @@ import hu.elte.bank.repository.AccountRepository;
 import hu.elte.bank.repository.TransactionRepository;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AccountService {
     
+    @Autowired
     private AccountRepository accountRepository;
+    @Autowired
     private TransactionRepository transactionRepository;
     
+     public List<Account> listAllAccount() {
+
+        List<Account> allAccount = new ArrayList<>();
+        accountRepository.findAll().iterator().forEachRemaining(allAccount::add);
+
+        return allAccount;
+    }
+     
     public long balanceQuery(String accountnumber){
-        return accountRepository.findByAccountnumber(accountnumber).get().getBalance();
+        return accountRepository.findByAccountNumber(accountnumber).getBalance();
     }
     
     public List<Transaction> getMyTransactions(String sourceAccountNumber) {
