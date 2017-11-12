@@ -22,6 +22,11 @@ public class AccountApiController {
     @Autowired    
     private AccountService accountService;      
     
+    @GetMapping("/list")
+    public ResponseEntity<List<Account>> listAllAccount() {
+        return ResponseEntity.ok(accountService.listAllAccount());
+    }    
+    /*
     @GetMapping("/balance")
     @RolesAllowed("CLIENT")
     public ResponseEntity<Long> balanceQuery(@RequestBody Account account){
@@ -32,6 +37,18 @@ public class AccountApiController {
     @RolesAllowed("CLIENT")
     public ResponseEntity<List<Transaction>> getMyTransactions(@RequestBody Account account){
         return ResponseEntity.ok(accountService.getMyTransactions(account.getAccountNumber()));
+    }
+    */
+    @GetMapping("/balance/{accountNumber}")
+    @RolesAllowed("CLIENT")
+    public ResponseEntity<Long> balanceQuery(@PathVariable String account){
+        return ResponseEntity.ok(accountService.balanceQuery(account));
+    }
+    
+    @GetMapping("/transactions/{accountNumber}")
+    @RolesAllowed("CLIENT")
+    public ResponseEntity<List<Transaction>> getMyTransactions(@PathVariable String account){
+        return ResponseEntity.ok(accountService.getMyTransactions(account));
     }
     
     @PutMapping("/transfer/{transferAmount}")
