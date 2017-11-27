@@ -6,7 +6,7 @@ Készítsük el egy bank ügyfelek kezelését, és az ügyfelekkel kapcsolatos 
 
 A webes felületen keresztül az ügyfelek érik el a bankolási funkciókat.
 
-	• A főoldalon lehetőségünk van bejelentkezésre. Bejelentkezéskor meg kell adnunk a felhasználónevünket, jelszavunkat, számlaszámunkat (ha több van, akkor a legelsőt), valamint ellenőrző PIN kódunkat. Ezen felül a felhasználó választhat biztonságos üzemmódot is, ekkor minden művelet (számlatörténet lekérdezés, illetve átutalás) előtt a weblapismét bekéri a felhasználó jelszavát. A bejelentkezést követően bármikor kijelentkezhet az ügyfél.	
+	• A főoldalon lehetőségünk van bejelentkezésre. Bejelentkezéskor meg kell adnunk a felhasználónevünket, jelszavunkat, számlaszámunkat (ha több van, akkor a legelsőt), valamint ellenőrző PIN kódunkat. A bejelentkezést követően bármikor kijelentkezhet az ügyfél.	
 	• Sikeres bejelentkezés esetén lehetősége nyílik megtekinteni a számlái egyenlegeit (egy ügyfélhez legalább egy, de tetszőlegesen sok számla tartozhat), valamint azok történetét (átutalások, betétek, kivétek listája) egy hónapra visszamenőleg.	
 	• Lehetősége van új átutalást megadni (ha a számla nincs zárolva), ekkor ki kell tölteni az összeget, célszámla tulajdonosát, valamint számlaszámát, majd elküldhetjük az utalást, ekkor az összeg azonnal levonódik az egyenlegből (az átutalandó összeg nem lehet nagyobb a rendelkezésre álló egyenlegnél). Amennyiben a célszámla is a banknál van, akkor ott is meg kell jelennie az összegnek, mint befolyó utalás.
 	
@@ -27,7 +27,6 @@ Az adatbázis az alábbi adatokat tárolja (ezek még nem feltétlenül a fizika
 #### VENDÉG:
 
 	• Bejelentkezés felhasználónévvel, jelszóval, számlaszámmal és PIN-kóddal
-	• Bejelentkezés biztonsági móddal
 	• Számla(k) egyenlegének lekérdezése
 	• Számla(k) történetének lekérdezése
 	• Új utalás indítása	
