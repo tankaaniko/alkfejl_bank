@@ -27,15 +27,15 @@ public class TransactionService {
 
         switch (transaction.getType()) {
             case IN:
-                if (source != null) {
-                    accountService.deposit(source, transaction.getAmount());
+                if (target != null) {
+                    accountService.deposit(target, transaction.getAmount());
                 } else {
                     throw new NotFoundAccountException();
                 }
                 break;
             case OUT:
                 if (source != null) {
-                    accountService.deposit(source, transaction.getAmount());
+                    accountService.withdraw(source, transaction.getAmount());
                 } else {
                     throw new NotFoundAccountException();
                 }

@@ -41,14 +41,14 @@ public class AccountApiController {
     */
     @GetMapping("/balance/{accountNumber}")
     @RolesAllowed("CLIENT")
-    public ResponseEntity<Long> balanceQuery(@PathVariable String account){
-        return ResponseEntity.ok(accountService.balanceQuery(account));
+    public ResponseEntity<Long> balanceQuery(@PathVariable String accountNumber){
+        return ResponseEntity.ok(accountService.balanceQuery(accountNumber));
     }
     
     @GetMapping("/transactions/{accountNumber}")
     @RolesAllowed("CLIENT")
-    public ResponseEntity<List<Transaction>> getMyTransactions(@PathVariable String account){
-        return ResponseEntity.ok(accountService.getMyTransactions(account));
+    public ResponseEntity<List<Transaction>> getMyTransactions(@PathVariable String accountNumber){
+        return ResponseEntity.ok(accountService.getMyTransactions(accountNumber));
     }
     
     @PutMapping("/transfer/{transferAmount}")

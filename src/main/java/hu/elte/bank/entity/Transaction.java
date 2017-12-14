@@ -17,8 +17,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Transaction {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    // @JsonIgnoreProperties("articles")
+    //ManyToMany meléyik számlához tartozik
     private long id;
    
     @Column(nullable=false)

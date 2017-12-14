@@ -1,5 +1,6 @@
 package hu.elte.bank.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.sql.Timestamp;
 import java.util.Date;
 import javax.persistence.Column;
@@ -14,6 +15,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Entity
 @Data // lombok miatt getter setter
 @NoArgsConstructor
@@ -22,6 +24,7 @@ public class Account {
     
     @JoinColumn
     @ManyToOne(targetEntity = Client.class, optional = false)
+   // @JsonIgnoreProperties("articles")
     private Client client;
     
     @Id

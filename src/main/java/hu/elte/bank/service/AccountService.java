@@ -25,6 +25,14 @@ public class AccountService {
         return allAccount;
     }
      
+    public Account accountByNumber(String accountnumber) {
+   
+        return accountRepository.findByAccountNumber(accountnumber);
+
+      
+    }
+   
+     
     public long balanceQuery(String accountnumber){
         return accountRepository.findByAccountNumber(accountnumber).getBalance();
     }

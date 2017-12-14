@@ -23,6 +23,7 @@ import lombok.NoArgsConstructor;
 public class Client {
     
     @OneToMany(targetEntity = Account.class, mappedBy = "client")
+    // @JsonIgnoreProperties("articles")
     private List<Account> accounts;
     
     @Id
