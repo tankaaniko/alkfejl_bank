@@ -69,7 +69,7 @@ public class TransactionService {
         return allTransaction;
     }
 
-    public List<Transaction> listByStatus(Status status) {
+    public List<Transaction> listByStatus(String status) {
 
         List<Transaction> transactions = new ArrayList<>();
         transactionRepository.findAllByStatus(status).iterator().forEachRemaining(transactions::add);

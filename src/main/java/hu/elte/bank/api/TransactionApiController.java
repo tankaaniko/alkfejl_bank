@@ -39,7 +39,7 @@ public class TransactionApiController {
     }
     
     @GetMapping("/list/{status}")
-    public ResponseEntity<List<Transaction>> listByStatus(@PathVariable Status status) {
+    public ResponseEntity<List<Transaction>> listByStatus(@PathVariable String status) {
         return ResponseEntity.ok(transactionService.listByStatus(status));
     }
 }
