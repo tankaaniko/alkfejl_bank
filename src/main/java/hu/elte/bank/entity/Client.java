@@ -22,9 +22,9 @@ import lombok.NoArgsConstructor;
 @DeclareRoles("CLIENT")
 public class Client {
     
-    @OneToMany(targetEntity = Account.class, mappedBy = "client")
+    /*@OneToMany(targetEntity = Account.class, mappedBy = "client")
     // @JsonIgnoreProperties("articles")
-    private List<Account> accounts;
+    private List<Account> accounts;*/
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
