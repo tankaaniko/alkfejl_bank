@@ -13,6 +13,7 @@ public interface AccountRepository extends CrudRepository<Account,Long>{
    // Optional<Account> findByUsername(String username);
     
     Optional<Account> findByClient(Client client);
+    Iterable<Account> findByUsername(String username);
     
     
 }

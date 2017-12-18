@@ -16,6 +16,9 @@ public class AccountService {
     private AccountRepository accountRepository;
     @Autowired
     private TransactionRepository transactionRepository;
+    @Autowired
+    private ClientService clientService;
+    
     
      public List<Account> listAllAccount() {
 
@@ -23,6 +26,14 @@ public class AccountService {
         accountRepository.findAll().iterator().forEachRemaining(allAccount::add);
 
         return allAccount;
+    }
+     
+    public List<Account> listMyAccounts() {
+
+        List<Account> myAccounts = new ArrayList<>();
+        accountRepository.findByUsername(clientService.getLoggedInClient().getUsername()).iterator().forEachRemaining(myAccounts::add);
+
+        return myAccounts;
     }
      
     public Account accountByNumber(String accountnumber) {

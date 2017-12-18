@@ -25,7 +25,11 @@ public class AccountApiController {
     @GetMapping("/list")
     public ResponseEntity<List<Account>> listAllAccount() {
         return ResponseEntity.ok(accountService.listAllAccount());
-    }    
+    }  
+    @GetMapping("/listmy")
+    public ResponseEntity<List<Account>> listMyAccounts() {
+        return ResponseEntity.ok(accountService.listMyAccounts());
+    } 
     /*
     @GetMapping("/balance")
     @RolesAllowed("CLIENT")
