@@ -31,7 +31,7 @@ public class ClientService {
     }
 
     public boolean isValid(Client client) {
-        return clientRepository.findByUsernameAndPassword(client.getUsername(), client.getPassword()).isPresent();
+        return clientRepository.findByUsernameAndPasswordAndPin(client.getUsername(), client.getPassword(), client.getPin()).isPresent();
     }
 
     public boolean isLoggedIn() {
