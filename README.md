@@ -168,6 +168,100 @@ Ezután a böngészőben a http://localhost:8080 címen érhető el az applikác
 ### 5. Szekvenciadiagram - Ügyfél bejelentkezése
 ![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/sequence_UML.JPG)
 
+# IV. Frontend megvalósítása	
+
+### 1. Használati esetek:	
+
+### 2. Felhasznált eszközök:
+	
+	A frontend fejlesztése az alábbi eszközökkel készült:
+	
+	• Git és Github a verziókövetésért
+	• Visual Studio Code fejlesztői környezet
+	• Typescript programozási nyelv 
+	• Angular keretrendszer Node.js és NPM környezettel
+
+### 3. Fejlesztőkörnyezet:	
+
+	1. A banki alkamlazás frontend-je a Githubon a https://github.com/tankaaniko/alkfejl_bank_prototype 
+	repositoryban található.
+	2. A projektet vagy a Githubon történő Clone or Download lehetőséggel
+	vagy a git clone https://github.com/tankaaniko/alkfejl_bank_prototype.git paranccsal elérhetővé tesszük a lokális gépen.
+	3. Projektkönyvtárat megnyitjuk a Visual Studio Code-ban
+	4. ctrl + Ö billentyűkombinációval megjelenik a parancsablak, melybe az alábbi parancsokat kell begépelni
+		npm install
+		npm start
+	5. npm start parancs után a projekt elérhető a http://localhost:4200/ -es címen	
+	
+### 4. Könyvtárszerkezet:
+	bank-app/src/app
+		account-list : Számlák listázása
+			account-list.component.css
+			account-list.component.html
+			account-list.component.spec.ts
+			account-list.component.ts
+		client-accounts: Felhasználó saját számlái
+			client-accounts.component.css
+			client-accounts.component.html
+			client-accounts.component.spec.ts
+			client-accounts.component.ts
+		client-transaction: Felhasználó saját tranzakciói
+			client-transaction.component.css
+			client-transaction.component.html
+			client-transaction.component.spec.ts
+			client-transaction.component.ts
+		login-client: Felhasználó bejelentkezése
+			login-client.component.css
+			login-client.component.html
+			login-client.component.spec.ts
+			login-client.component.ts
+		login-employee: Alkalmazott bejelentkezése
+			login-employee.component.css
+			login-employee.component.html
+			login-employee.component.spec.ts
+			login-employee.component.ts
+		main-page: Főoldal
+			main-page.component.css
+			main-page.component.html
+			main-page.component.spec.ts
+			main-page.component.ts
+		menu: Menü
+			menu.component.css
+			menu.component.html
+			menu.component.spec.ts
+			menu.component.ts
+		routing: Útvonalak
+			routing-module.ts
+		transaction-form: Új tranzakció
+			transaction-form.component.css
+			transaction-form.component.html
+			transaction-form.component.spec.ts
+			transaction-form.component.ts
+		transaction-list: Tranzakciók listázása
+			transaction-list.component.css
+			transaction-list.component.html
+			transaction-list.component.spec.ts
+			transaction-list.component.ts
+			
+		account.ts: Számla
+		client.ts: Felhasználó
+		transaction.ts: Tranzakciók : betét,kivét,utalás
+	
+		account-service.ts
+		auth-service.ts
+		client-service.ts
+		transaction-service.ts
+		
+		app-module.ts
+		app-component.html
+		app-component.css
+		app-component.ts
+		app-component.spec.ts
+### 5. Felületi tervek:
+
+### 6. Megvalósítás:	
+
+### 7. Tesztelés:	
 
 	
 		
