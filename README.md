@@ -171,8 +171,8 @@ Ezután a böngészőben a http://localhost:8080 címen érhető el az applikác
 # IV. Frontend megvalósítása	
 
 ### 1. Használati esetek:	
-![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/usecase1.png)
-![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/usecase2.png)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/usecase1.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/usecase2.PNG)
 
 ### 2. Felhasznált eszközök:
 	
@@ -260,13 +260,13 @@ Ezután a böngészőben a http://localhost:8080 címen érhető el az applikác
 		app-component.ts
 		app-component.spec.ts
 ### 5. Felületi tervek:
-![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/clinetlogin.png)
-![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employeelogin.png)
-![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/clienttrans.png)
-![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/clientaccount.png)
-![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/newtransa.png)
-![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employeeaccount.jpg)
-![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employeetransa.jpg)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/clientlogin.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employeelogin.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/clienttrans.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/clientaccount.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/newtransa.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employeeaccount.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employeetransa.PNG)
 ### 6. Megvalósítás:	
 
 ### 7. Tesztelés:	
