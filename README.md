@@ -259,6 +259,18 @@ Ezután a böngészőben a http://localhost:8080 címen érhető el az applikác
 		app-component.css
 		app-component.ts
 		app-component.spec.ts
+		
+	bank-app/src/e2e: tesztelés
+		all-accounts.e2e-spec.ts
+		all-transactions.e2e-spec.ts
+		app.e2e-spec.ts
+		app.po.ts
+		client-accounts.e2e-spec.ts
+		client-transactions.e2e-spec.ts
+		login-employee.e2e-spec.ts
+		login.e2e-spec.ts
+		new-transaction.e2e-spec.ts	
+		
 ### 5. Felületi tervek:
 ![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/clientlogin.PNG)
 ![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employeelogin.PNG)
@@ -267,9 +279,29 @@ Ezután a böngészőben a http://localhost:8080 címen érhető el az applikác
 ![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/newtransa.PNG)
 ![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employeeaccount.PNG)
 ![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employeetransa.PNG)
+
 ### 6. Megvalósítás:	
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/client-login.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/client-accounts.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/client-transactions.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/new-transaction.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employee-login.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employee-accounts.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/employee-transactions.PNG)
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/login.PNG)
 
 ### 7. Tesztelés:	
 
-	
-		
+Az kliens tesztelése e2e teszteléssel történt. Ehhez szükség volt a protractor nevű programra.
+A tesztfájlok a könyvtárszerkezet **bank-app/e2e** mappájában találhatóak. Az egyes tesztesetek az oldalak közötti árirányítást ellenőrzik a h1 css szelektorok alapján.
+
+Az tesztek a következő eseteket fedik le:
+	Főoldal betöltése
+	Felhasználó bejelentkezése helytelen és helyes adatokkal
+	Alkalmazott  bejelentkezése helytelen és helyes adatokkal
+	Új tranzakció indítása
+	Alkalmazott által látott összes tranzakció és összes számlaszám adatainak megjelenése
+	Felhasználó által látott saját tranzakciók és számlák megjelenése
+
+![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/tests.PNG)
+
