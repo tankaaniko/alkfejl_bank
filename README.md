@@ -295,13 +295,13 @@ Ezután a böngészőben a http://localhost:8080 címen érhető el az applikác
 Az kliens tesztelése e2e teszteléssel történt. Ehhez szükség volt a protractor nevű programra.
 A tesztfájlok a könyvtárszerkezet **bank-app/e2e** mappájában találhatóak. Az egyes tesztesetek az oldalak közötti árirányítást ellenőrzik a h1 css szelektorok alapján.
 
-Az tesztek a következő eseteket fedik le:
-	Főoldal betöltése
-	Felhasználó bejelentkezése helytelen és helyes adatokkal
-	Alkalmazott  bejelentkezése helytelen és helyes adatokkal
-	Új tranzakció indítása
-	Alkalmazott által látott összes tranzakció és összes számlaszám adatainak megjelenése
-	Felhasználó által látott saját tranzakciók és számlák megjelenése
+	• A tesztek a következő eseteket fedik le:
+	• Főoldal betöltése
+	• Felhasználó bejelentkezése helytelen és helyes adatokkal
+	• Alkalmazott  bejelentkezése helytelen és helyes adatokkal
+	• Új tranzakció indítása
+	• Alkalmazott által látott összes tranzakció és összes számlaszám adatainak megjelenése
+	• Felhasználó által látott saját tranzakciók és számlák megjelenése
 
 ![alt text](https://github.com/tankaaniko/alkfejl_bank/blob/master/tests.PNG)
 
